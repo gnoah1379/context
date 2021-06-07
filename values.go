@@ -10,10 +10,6 @@ type KV struct {
 	Value interface{}
 }
 
-func KeyValue(key interface{}, value interface{}) KV {
-	return KV{key, value}
-}
-
 func WithValues(parent context.Context, values ...KV) Context {
 	mapValues := make(map[interface{}]interface{})
 	for _, kv := range values {
